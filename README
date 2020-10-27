@@ -1,0 +1,14 @@
+BoLT : Barrier-optimized LSM-Tree
+BoLT is a variant of LSM-tree that minimizes the number of calls to fsync()/fdatasync() barriers while taking advantage of fine-grained SSTables.
+
+#LevelDBBoLT build
+cd LevelDBBoLT
+mkdir -p build
+cd build
+cmake .. && make
+
+#HyperLevelDBBoLT build
+cd HyperLevelDBBoLT
+mkdir -p build
+cd build
+cmake .. && make
