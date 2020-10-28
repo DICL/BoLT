@@ -1420,7 +1420,8 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
       }
     }
 
-    input->Next();
+    if(next_key_flag)
+        input->Next();
   }
 
   if (status.ok() && shutting_down_.Acquire_Load()) {
