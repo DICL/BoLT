@@ -3,12 +3,10 @@ BoLT is a variant of LSM-tree that minimizes the number of calls to fsync()/fdat
 
 #LevelDBBoLT build
 cd LevelDBBoLT
-mkdir -p build
-cd build
-cmake .. && make
+mkdir -p build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
 
 #HyperLevelDBBoLT build
 cd HyperLevelDBBoLT
-mkdir -p build
-cd build
-cmake .. && make
+mkdir -p build && cd build
+cmake -DCMAKE_CXX_FLAGS=-fPIC -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
